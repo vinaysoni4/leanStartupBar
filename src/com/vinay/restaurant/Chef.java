@@ -98,7 +98,7 @@ public class Chef implements Runnable {
 					orderpicked(order);
 					Item item = order.getItem();
 					orderPreparing(item);
-					Thread.sleep(item.getPreprationTime() * 1000);
+					Thread.sleep(item.getPreprationTime() * 1000 * 60);
 					orderFinished(item, order);
 					writeToFile();
 				}
